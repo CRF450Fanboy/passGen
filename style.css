@@ -1,0 +1,192 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin-left: 0px;
+  margin-top: 0px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  background-color: #16161a;
+  text-align: center;
+}
+
+#title
+{
+  text-align: center;
+  color: #fffffe;
+  font-size: 150%;
+  border: 3px solid #7f5af0;
+  padding: 10px;
+  margin: auto;
+  display: inline-block;
+  justify-content: center;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+#navbar
+{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+/*   position: fixed; */
+  border-radius: 0 0 10px 10px;
+}
+
+#navbar > div
+{
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid #7f5af0;
+  border-radius: 30px;
+  color: #fffffe;
+  background-color: #7f5af0;
+  padding: 10px;
+}
+
+#navbar > div
+{
+  
+}
+
+#home
+{
+  transition: .3s;
+}
+
+#home:hover
+{
+  background-color: #16161a;
+  border: 3px solid #7f5af0;
+  border-radius: 10px;
+}
+
+#passGen
+{
+  transition: .3s;
+}
+
+#passGen:hover
+{
+  background-color: #16161a;
+  border: 3px solid #7f5af0;
+  border-radius: 10px;
+}
+
+#gen
+{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  border: 2px solid #2cb67d;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  resize: none;
+  height: 150px;
+  width: 250px;
+}
+
+#filter
+{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+/*   position: fixed; */
+  border-radius: 0 0 10px 10px;
+}
+
+#filter > div
+{
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid #7f5af0;
+  border-radius: 30px;
+  color: #fffffe;
+  background-color: #7f5af0;
+  padding: 10px;
+}
+
+#filter > div:hover
+{
+  border-radius: 10px;
+}
+
+#lowerCase
+{
+  transition: .3s;
+}
+
+#upperCase
+{
+  transition: .3s;
+}
+
+#number
+{
+  transition: .3s;
+}
+
+#special
+{
+  transition: .3s;
+}
+
+#filter2
+{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+/*   position: fixed; */
+  border-radius: 0 0 10px 10px;
+}
+
+#filter2 > input
+{
+  min-width: 300px;
+  text-align: center;
+  border: 3px solid #7f5af0;
+  border-radius: 30px;
+  color: #fffffe;
+  background-color: #7f5af0;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+#length:hover
+{
+  border-radius: 10px;
+}
+
+#length:focus
+{
+  border-radius: 10px;
+}
+
+#length::placeholder
+{
+  color: #fffffe;
+  font-weight: bold;
+/*   font-size: 75%; */
+}
+
+#count:hover
+{
+  border-radius: 10px;
+}
+
+#count:focus
+{
+  border-radius: 10px;
+}
+
+#count::placeholder
+{
+  color: #fffffe;
+  font-size: bold;
+}

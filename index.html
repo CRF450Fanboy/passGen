@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title id="tabTitle">🔐 | PassGen</title>
+  <link rel="icon" href="img/logo.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="module" src="script.js"></script>
+</head>
+<!-- https://www.happyhues.co/palettes/4 -->
+<!--   mettere classe elementi navbar, :active, PassGen -->
+<!-- lowerCase, upperCase, length -->
+<body>
+  <p id="title">PassGen</p>
+  <textarea id="gen" placeholder="output"></textarea>
+
+  <div id="filter">
+    <div id="lowerCase">
+      a-z
+    </div>
+
+    <div id="upperCase">
+      A-Z
+    </div>
+    <div id="number">
+      0-9
+    </div>
+
+    <div id="special">
+      #!?
+    </div>
+  </div>
+
+  <div id="filter2">
+    <input id="length" placeholder="Lunghezza Password (max = 16)" value=""></input>
+<!--     <input id="count" placeholder="Quante Password (max = 10)"></input> -->
+  </div>
+  
+  <div id="navbar">
+    <div id="home">
+      Generate
+    </div>
+  </div>
+
+</body>
+
+</html>
