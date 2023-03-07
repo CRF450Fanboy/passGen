@@ -2,4 +2,6 @@
 Simple password generator
 
 # TODO
-nothing
+fix number chooser
+hover effect
+add 1) 2) 3) pwd output
