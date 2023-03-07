@@ -2,4 +2,4 @@
 Simple password generator
 
 # TODO
-add pwd append
+nothing
