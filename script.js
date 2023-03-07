@@ -5,6 +5,7 @@ var tabCheck = false;
 document.getElementById('home').addEventListener("click", function() {
   // console.log("ciao");
   // document.getElementById('gen').value = "bertoldo";
+  gen.value = "";
   checkGenerator();
 });
 
@@ -12,6 +13,7 @@ document.addEventListener("keypress", function(e) {
   if (e.key === 'Enter') {
     // console.log("ciao");
     // document.getElementById('gen').value = "bertoldo";
+    gen.value = "";
     checkGenerator();
   }
 });
@@ -82,11 +84,13 @@ function generator() {
   var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
   var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   var number = '0123456789'
-  var special = '!#$%&()*+,-./:;<=>?@[\]^_`{|}~'
+  var special = '!#$%&()*+,-./:;<=>?@[\\]^_`{|}~'
   var result = '';
   var char = 0;
   console.log("length: " + document.getElementById('length').value);
 
+  result = "";
+  /*
   if (document.getElementById('length').value <= 16 && document.getElementById('length').value != 0) {
     for (var i = 0; i < document.getElementById('length').value; i++) {
       char = Math.floor(Math.random() * 4) + 1;
@@ -112,16 +116,72 @@ function generator() {
   else {
     result = "Lunghezza massima superata";
   }
+  */
+
+    for(let j = 0; j < document.getElementById("count").value; j++)
+    {
+      for (var i = 0; i < document.getElementById('length').value; i++) {
+        char = Math.floor(Math.random() * 4) + 1;
+        // console.log(char);
+        if (char == 1 && checkLower == 1) {
+          result += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
+        }
+        else if (char == 2 && checkUpper == 1) {
+          result += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
+        }
+        else if (char == 3 && checkNumber == 1) {
+          result += number.charAt(Math.floor(Math.random() * number.length));
+        }
+        else if (char == 4 && checkSpecial == 1) {
+          result += special.charAt(Math.floor(Math.random() * special.length));
+        }
+        else {
+          i--;
+        }
+      }
+
+      if(j == document.getElementById("length").value - 1)
+      {
+        result = result;
+      }
+      else
+      {
+        result = result + "\n";
+      }
+    }
+    tabCheck = true;
+
+
+  var errorCheck1 = false;
+  var errorCheck2 = false;
 
   if (document.getElementById('length').value == "") {
-    result = "Lunghezza non inserita";
+    result = "Lunghezza non inserita\n";
+    errorCheck1 = true;
   }
   else if(document.getElementById('length').value == "0")
   {
-    result = "La lunghezza non può essere 0";
+    result = "La lunghezza non può essere 0\n";
+    errorCheck1 = true;
   }
+
+  if (document.getElementById('count').value == "") {
+    result = "Numero di password non inserito\n";
+    errorCheck2 = true;
+  }
+  else if(document.getElementById('count').value == "0")
+  {
+    result = "Il numero di password non può essere 0\n";
+    errorCheck2 = true;
+  }
+
+  if(errorCheck1 && errorCheck2)
+  {
+    result = "Lunghezza non valida\n Numero di password non valido";
+  }
+
   console.log("result: " + result);
-  gen.value += "\n" + result;
+  gen.value += result;
   console.log("tabCheck: " + tabCheck);
   if(tabCheck == true)
   {
